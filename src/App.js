@@ -26,6 +26,7 @@ function App() {
       <Button>Add Todo</Button>
       <Button>Check Todo</Button>
       <Button>Delete</Button>
+      <input type="text"/>
     </div>
   );
 }
