@@ -1,33 +1,30 @@
 import React, { useState } from "react";
 import Button from "./Components/ui/Button";
-import StudentList from "./Components/StudentList";
+import StudentList from "./Components/StudentList"
+import Card from "./Components/ui/Card";
 
 function App() {  
-  // const [showUsers, setShowUsers] = useState(false)
   const [showUsers, setShowUsers] = useState(false)
+  
 
   const studentList = [
-    {id: '1', name: 'Orozbai'},
-    {id: '2', name: 'Orozaaly'},
-    {id: '3', name: 'Orozbek'},
-    {id: '4', name: 'Oroz'},
+    {id: "1", name: "Orozbai"},
+    {id: "2", name: "Oroz"},
+    {id: "3", name: "Orozbek"}
   ]
-
-  function toggleUsers() {
-    // alert('Assalam aleikum')
+  const toggleUsers = () => {
     setShowUsers(prevState => !prevState)
   }
 
+
   return (
-    <div>
-      {showUsers && <StudentList students = {studentList}/>}
-      {/* <StudentList students = {studentList}/> */}
-      <Button onClick = {toggleUsers}>Show Users</Button>
-      <Button>Add Todo</Button>
-      <Button>Check Todo</Button>
-      <Button>Delete</Button>
-      <input type="text"/>
-    </div>
+    <Card>
+   {showUsers && <StudentList student = {studentList}/>}
+    <Button onClick={toggleUsers}>Show Users</Button>
+    <Button>Add Todo</Button>
+    <Button>Todo</Button>
+    <Button>ddd</Button>
+    </Card>
   );
 }
 

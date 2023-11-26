@@ -1,5 +1,11 @@
-const Button = (props) => {
-    console.log(props);
-    return <button onClick={props.onClick}>{props.children}</button>
+import React from 'react'
+
+const Button = ({children, onClick}) => {
+  return (
+    <div>
+        <button onClick={onClick}>{children}</button>
+    </div>
+  )
 }
+
 export default Button
